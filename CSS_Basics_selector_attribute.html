@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Basics Demo</title>
+    <style>
+        /* attribute selector */
+        [myAttr] {
+            font-size: 20px;
+        }
+
+        /* attribute = value */
+        [myAttr="border"] {
+            border:dashed 1px #000000;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        /* attribute ~= "value" */
+        [myAttr~="shadow"] {
+            text-shadow:-5px 10px 4px #000000;
+        }
+        [myAttr|="g"] {
+            text-shadow:-5px 10px 4px #005555;
+        }
+
+        /* attribute in element */
+        div[myAttr] {
+            color: #D15858;
+        }
+        p[myAttr] {
+            color: #35d17e;
+        }
+
+    </style>
+</head>
+<body>
+    <div myAttr = "border">
+        It is attribute "myAttr" in element "div" demo.<br />
+    </div>
+    <div myAttr = "border shadow">
+        It is attribute "myAttr" in element "div" demo.<br />
+    </div>
+    <p myAttr = "shadow">
+        It is attribute "myAttr" in element "p" demo.<br />
+    </p>
+    <p myAttr = "g-shadow">
+        It is attribute "myAttr" in element "p" demo.<br />
+    </p>
+</body>
+</html>

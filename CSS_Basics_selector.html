@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Basics Demo</title>
+    <style>
+        /* class selector */
+        .myClass1 {
+            font-family: 'times new roman', times, serif;
+            color: #D15858;
+            font-size: 16px;
+        }
+        .myClass1 .subClass1{
+            font-size: 30px;
+        }
+        .myClass2 {
+            text-shadow:-16px 10px 4px #000000;
+        }
+        /* id */
+        #myID {
+            text-decoration: underline;
+            text-align: justify;
+        }
+
+        #myID #subID {
+            font-size: 20px;
+        }
+
+        /* element */
+        /* element, element */
+        div, p {
+            border:dashed 1px #000000;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        div.subClass{
+            color: #2bd13e;
+        }
+
+        div#subID{
+            color: #0e36d1;
+        }
+    </style>
+</head>
+<body>
+    <div id="myID" class="myClass1">
+        It is element "div" demo.<br />
+        <span class="subClass1">
+            It is sub class.
+        </span>
+        <span id="subID">
+            It is sub id.
+        </span>
+    </div>
+    <p class="myClass2">
+        It is element "p" demo.<br />
+        <span class="subClass1">
+            It is error sub class.
+        </span>
+        <span id="subID">
+            It is wrong sub id.
+        </span>
+    </p>
+    <div class="myClass1 myClass2">
+        It is multi class style demo.<br />
+        <span class="subClass1">
+            It is sub class.
+        </span>
+    </div>
+    <br />
+    <span class="subClass1">
+        It is wrong sub class.
+    </span>
+    <div class="subClass">
+        It is sub class in element.
+    </div>
+    <div id="subID">
+        It is sub id in element.
+    </div>
+</body>
+</html>
